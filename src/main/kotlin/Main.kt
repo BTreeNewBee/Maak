@@ -1,7 +1,14 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+import iguigui.server.WsServer
+
+
+//试图给Maa编写一个WS接口这样子我就可以集成机器人上了
+fun main(args: Array<String>) {
+    var port = 8848
+    try {
+        port = args[0].toInt()
+    } catch (ex: Exception) { }
+    val s = WsServer(port)
+    s.start()
+    println("ChatServer started on port: " + s.port)
 }
