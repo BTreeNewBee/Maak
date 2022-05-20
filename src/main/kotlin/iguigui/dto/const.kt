@@ -1,5 +1,7 @@
 package iguigui.dto
 
+import com.sun.jna.Pointer
+
 //开始唤醒
 const val STARTUP = "StartUp"
 //刷理智
@@ -18,3 +20,19 @@ const val AWARD = "Award"
 const val ROGUELIKE = "Roguelike"
 //自动抄作业
 const val COPILOT = "Copilot"
+
+//销毁实例
+const val DESTORY = "Destory"
+
+//列出链接实例
+const val LIST_INSTANCE = "ListInstance"
+
+
+const val APPEND_TASK = "AppendTask"
+
+const val SET_TASK_PARAMS = "SetTaskParams"
+
+const val START = "Start"
+
+const val STOP = "Stop"
+

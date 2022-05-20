@@ -19,6 +19,8 @@ dependencies {
     implementation("org.java-websocket:Java-WebSocket:1.5.3")
     //JNA
     implementation("net.java.dev.jna:jna:5.11.0")
+    //serialization
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.3.3")
 }
 
 tasks.test {

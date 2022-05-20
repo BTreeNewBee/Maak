@@ -14,8 +14,11 @@ class MaaFactory(val maaPath: String, val adbPath: String) {
 
     fun create() = MaaInstance(instance, instance.AsstCreate(), generatorId())
 
-    fun createEx(callback: MeoAssistant.AsstApiCallback, custom_arg: String) =
-        MaaInstance(instance, instance.AsstCreateEx(callback, custom_arg), generatorId())
+    fun createEx() = run {
+        val maaInstance = MaaInstance(instance, generatorId())
+        maaInstance.pointer = instance.AsstCreateEx(maaInstance, maaInstance.id)
+    }
+
 
     private fun generatorId() = UUID.randomUUID().toString()
 }

@@ -1,8 +1,17 @@
 package iguigui.dto.request
 
 import iguigui.dto.STARTUP
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-sealed class BaseRequest(open val command: String)
+
+sealed class BaseRequest
 
 
-data class StartUp(val data: String) : BaseRequest(STARTUP)
+@Serializable
+@SerialName(STARTUP)
+data class StartUpRequst(val data: String) : BaseRequest()
+
+@Serializable
+@SerialName(STARTUP)
+data class ListInstanceRequst(val data: String) : BaseRequest()
