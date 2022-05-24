@@ -27,12 +27,21 @@ const val DESTORY = "Destory"
 //列出链接实例
 const val LIST_INSTANCE = "ListInstance"
 
-
+//添加任务
 const val APPEND_TASK = "AppendTask"
 
+//设定任务参数
 const val SET_TASK_PARAMS = "SetTaskParams"
 
+//启动任务
 const val START = "Start"
 
+//停止任务
 const val STOP = "Stop"
+
+//向设备发起连接
+const val CONNECT = "Connect"
+
+//销毁此次连接
+const val DESTROY = "Destroy"
 
